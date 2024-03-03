@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail product</title>
+    <link rel="stylesheet" href="css/detailProductStyle.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="desktop-nav">
+      <h1 class="web-title"><a href="index.html">Plantopia</a></h1>
+
+      <div class="search-container">
+        <div class="search-box">
+          <button class="search-button">
+            <i class="bx bx-search-alt-2 search-icon"></i>
+          </button>
+          <input type="search" name="" id="" />
+        </div>
+      </div>
+
+      <div
+        class="feature-profile-container"
+        style="display: flex; align-items: center; gap: 2rem"
+      >
+        <div class="nav-links">
+          <a href="javascript:void(0);" id="openChat"
+            ><i class="bx bxs-message-dots"></i
+          ></a>
+          <a href="cartPage.html"><i class="bx bxs-cart-alt" md></i></a>
+          <a href=""> <i class="bx bxs-heart"></i> </a>
+        </div>
+
+        <div class="user-box">
+          <p>Username</p>
+          <div class="user-profile"><i class="bx bxs-user"></i></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- FOR MOBILE NAV AND SEARCH BOX  -->
+    <main class="main-content">
+      <div class="back-container">
+        <a href="index.html" id="back-button" onclick="goBack()">
+          <i class="bx bx-chevron-left md icon"></i>
+        </a>
+        <p class="keranjang" style="width: fit-content">Detail Produk</p>
+      </div>
+
+      <nav class="mobile-nav">
+        <div class="nav-links-mobile">
+          <a href="index.html" style="color: inherit"
+            ><i class="bx bxs-home bx-md"></i
+          ></a>
+          <a
+            href="javascript:void(0);"
+            id="openChatMobile"
+            style="color: inherit"
+            ><i class="bx bxs-message-dots bx-md"></i
+          ></a>
+          <i class="bx bxs-cart-alt bx-md"></i>
+          <i class="bx bxs-heart bx-md"></i>
+        </div>
+      </nav>
+
+      <!-- CHAT BOX -->
+
+      <section class="chat-section" id="chatSection" style="display: none">
+        <div class="chat-box" id="chatBox">
+          <div class="header">
+            <button id="closeChat">
+              <i class="bx bx-chevron-left icon"></i>
+            </button>
+            <h2>Chat</h2>
+          </div>
+          <div class="user-info">
+            <div class="profile-picture"><i class="bx bxs-user"></i></div>
+            <p>Nama Admin</p>
+          </div>
+          <div class="chat-content" id="chatContent">
+            <!-- Chat bubbles will be appended here -->
+          </div>
+          <div class="input-area">
+            <button>
+              <h1><i class="bx bxs-image-alt icon"></i></h1>
+            </button>
+            <input type="text" placeholder="Ketik pesan..." />
+            <button id="sendText"><i class="bx bxs-send icon"></i></button>
+          </div>
+        </div>
+      </section>
+      <!-- CHAT BOX END -->
+      <!-- MOBILE NAVBAR END -->
+
+      <section class="detail-product-section">
+        <div class="photos-main-container">
+          <div class="photo-container">
+            <div class="display-photo-container">
+              <img
+                class="display-photo"
+                src="image/product-example.jpg"
+                alt="display photo"
+              />
+            </div>
+            <div class="photo-collection">
+              <a href="" class="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
+              /></a>
+              <a href="" class="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
+              /></a>
+              <a href="" class="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
+              /></a>
+              <a href="" class="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
+              /></a>
+              <a href="" class="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
+              /></a>
+              <a href="" class="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
+              /></a>
+            </div>
+          </div>
+          <div class="icon-container">
+            <a href="#"><i class="bx bx-share-alt"></i></a>
+            <a href="#"><i class="bx bxs-chat"></i></a>
+            <a href="#" class="cart-button" id="cartButton"
+              ><i class="bx bxs-cart-alt"></i
+            ></a>
+            <a href="" class="heart-button" id="heartButton"
+              ><i class="bx bx-heart"></i
+            ></a>
+          </div>
+
+          <div class="buy-container">
+            <div class="counter-container">
+              <button id="decrement" class="button">-</button>
+              <span style="font-size: x-large; font-weight: bold" id="count"
+                >0</span
+              >
+              <button id="increment" class="button">+</button>
+            </div>
+            <button class="beli">
+              Beli <i class="bx bxs-shopping-bags"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="price-desc-section">
+          <div class="price-desc-container">
+            <h1 class="title-product">Neanthe Bella Palm</h1>
+
+            <div class="star-tag-container">
+              <p class="star">
+                <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i>
+              </p>
+              <p>100 Review</p>
+
+              <div class="tags-box">
+                <p><i class="bx bxs-purchase-tag"></i></p>
+                <p>Tanaman hias</p>
+              </div>
+            </div>
+
+            <div class="price-container">
+              <h2 class="price">
+                Rp 180.000 <span class="discount-value">-20%</span>
+              </h2>
+
+              <h4 class="before-discount-price">Rp 200.000</h4>
+            </div>
+
+            <div class="desc-container">
+              <h2 class="desc">Deskripsi</h2>
+              <div class="desc-content" style="text-align: justify">
+                <p style="width: 100%">24 Frebruari 2024</p>
+
+                <p>
+                  Neanthe Bella Palm adalah pilihan yang ideal untuk mereka yang
+                  mencari tanaman hias yang tidak hanya indah tetapi juga mudah
+                  perawatannya. Dengan frond lembut dan daun hijau gelap yang
+                  anggun, tanaman ini membawa nuansa tropis ke dalam ruangan
+                  Anda, memberikan sentuhan eksotis yang begitu dinantikan.
+                </p>
+
+                <br />
+
+                <p><strong>Keunggulan:</strong></p>
+                <ul>
+                  <li>
+                    <strong>Kecantikan Serba Guna:</strong> Dengan penampilan
+                    yang elegan dan serba guna, Neanthe Bella Palm cocok
+                    ditempatkan di berbagai ruangan seperti ruang tamu, kamar
+                    tidur, atau kantor Anda.
+                  </li>
+                  <li>
+                    <strong>Pemeliharaan yang Mudah:</strong> Tanaman ini
+                    merupakan pilihan sempurna untuk pemula atau mereka yang
+                    memiliki jadwal yang sibuk. Neanthe Bella Palm dapat tumbuh
+                    dengan baik di kondisi cahaya yang rendah hingga sedang dan
+                    membutuhkan sedikit perawatan.
+                  </li>
+                  <li>
+                    <strong>Pembersih Udara Alami:</strong> Neanthe Bella Palm
+                    membantu menyaring udara di sekitarnya, menghilangkan
+                    beberapa polutan dan memberikan udara yang lebih segar di
+                    dalam rumah.
+                  </li>
+                  <li>
+                    <strong>Daya Tahan yang Baik:</strong> Tanaman ini tahan
+                    terhadap berbagai kondisi lingkungan dan dapat bertahan
+                    dalam keadaan kurang air sekalipun.
+                  </li>
+                </ul>
+
+                <br />
+
+                <p><strong>Cara Perawatan:</strong></p>
+                <ul>
+                  <li>
+                    <strong>Pencahayaan:</strong> Tempatkan tanaman ini di
+                    tempat yang mendapatkan cahaya indirek, hindari sinar
+                    matahari langsung yang berlebihan.
+                  </li>
+                  <li>
+                    <strong>Penyiraman:</strong> Siram tanah secara teratur,
+                    pastikan tanah tetap lembab tetapi tidak terlalu basah.
+                  </li>
+                  <li>
+                    <strong>Pemupukan:</strong> Berikan pupuk seimbang setiap
+                    bulan selama musim tumbuh.
+                  </li>
+                  <li>
+                    <strong>Kelembaban:</strong> Tingkat kelembaban yang cukup
+                    membantu tanaman tetap sehat. Semprotkan air ke daun secara
+                    periodik jika lingkungan terlalu kering.
+                  </li>
+                </ul>
+
+                <br />
+
+                <p>
+                  <strong
+                    >Bawa keajaiban alam ke dalam rumah Anda dengan Neanthe
+                    Bella Palm. Jadikan rumah Anda tempat yang lebih hijau,
+                    damai, dan penuh keindahan dengan sentuhan eksotis tanaman
+                    hias ini. Segera miliki Neanthe Bella Palm dan nikmati
+                    pesona kehidupan tropis di rumah Anda!</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rating-section">
+        <h1 class="review-title">Ulasan</h1>
+        <!-- ==================================== -->
+        <div class="user-rating-main-container">
+          <!-- =====USER REVIEW======= -->
+          <div class="user-review-container">
+            <h1 class="star-user">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i>
+            </h1>
+
+            <p style="width: 100%">24 Frebruari 2024</p>
+
+            <div class="name-profile-container">
+              <div class="profile"></div>
+              <h2 class="name">Username</h2>
+            </div>
+
+            <div class="user-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                libero esse, praesentium neque ad explicabo nihil blanditiis
+                necessitatibus at labore impedit exercitationem hic a nulla
+                doloribus, voluptas iste, cupiditate nisi!
+              </p>
+            </div>
+            >
+          </div>
+          <div class="user-image-container">
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- ==================================== -->
+        <div class="user-rating-main-container">
+          <!-- =====USER REVIEW======= -->
+          <div class="user-review-container">
+            <h1 class="star-user">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i>
+            </h1>
+
+            <p style="width: 100%">24 Frebruari 2024</p>
+            <div class="name-profile-container">
+              <div class="profile"></div>
+              <h2 class="name">Username</h2>
+            </div>
+
+            <div class="user-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                libero esse, praesentium neque ad explicabo nihil blanditiis
+                necessitatibus at labore impedit exercitationem hic a nulla
+                doloribus, voluptas iste, cupiditate nisi!
+              </p>
+            </div>
+            >
+          </div>
+          <div class="user-image-container">
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- ==================================== -->
+        <div class="user-rating-main-container">
+          <!-- =====USER REVIEW======= -->
+          <div class="user-review-container">
+            <h1 class="star-user">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i>
+            </h1>
+
+            <p style="width: 100%">24 Frebruari 2024</p>
+            <div class="name-profile-container">
+              <div class="profile"></div>
+              <h2 class="name">Username</h2>
+            </div>
+
+            <div class="user-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                libero esse, praesentium neque ad explicabo nihil blanditiis
+                necessitatibus at labore impedit exercitationem hic a nulla
+                doloribus, voluptas iste, cupiditate nisi!
+              </p>
+            </div>
+            >
+          </div>
+          <div class="user-image-container">
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- ==================================== -->
+        <div class="user-rating-main-container">
+          <!-- =====USER REVIEW======= -->
+          <div class="user-review-container">
+            <h1 class="star-user">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i>
+            </h1>
+
+            <p style="width: 100%">24 Frebruari 2024</p>
+            <div class="name-profile-container">
+              <div class="profile"></div>
+              <h2 class="name">Username</h2>
+            </div>
+
+            <div class="user-review">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                libero esse, praesentium neque ad explicabo nihil blanditiis
+                necessitatibus at labore impedit exercitationem hic a nulla
+                doloribus, voluptas iste, cupiditate nisi!
+              </p>
+            </div>
+            >
+          </div>
+          <div class="user-image-container">
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+            <div class="user-image">
+              <img src="image/review-image.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      // Mendapatkan lebar layar pengguna
+      var screenWidth = window.screen.width;
+
+      // Menyimpan lebar layar dalam variabel CSS
+      document.documentElement.style.setProperty(
+        "--screen-width",
+        screenWidth + "px"
+      );
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const decrementButton = document.getElementById("decrement");
+        const incrementButton = document.getElementById("increment");
+        const countElement = document.getElementById("count");
+        let count = 0;
+
+        decrementButton.addEventListener("click", function () {
+          count = Math.max(0, count - 1);
+          countElement.textContent = count;
+        });
+
+        incrementButton.addEventListener("click", function () {
+          count += 1;
+          countElement.textContent = count;
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const heartButton = document.getElementById("heartButton");
+        const cartButton = document.getElementById("cartButton");
+
+        heartButton.addEventListener("click", function () {
+          heartButton.classList.toggle("liked");
+          event.preventDefault();
+          if (heartButton.classList.contains("liked")) {
+            // Jika tombol hati (heart) diklik, ganti ikon dengan yang kedua
+            heartButton.innerHTML = "<i class='bx bxs-heart'></i>";
+            heartButton.style.color = "#ee4562";
+          } else {
+            // Jika tombol hati (heart) diklik lagi, kembalikan ke ikon yang pertama
+            heartButton.innerHTML = "<i class='bx bx-heart'></i>";
+            heartButton.style.color = "var(--text)";
+          }
+        });
+
+        cartButton.addEventListener("click", function () {
+          cartButton.classList.toggle("liked");
+          event.preventDefault();
+          if (cartButton.classList.contains("liked")) {
+            cartButton.style.color = "var(--primary)";
+          } else {
+            cartButton.style.color = "var(--text)";
+          }
+        });
+      });
+
+      // untuk chat
+      const openChatButton = document.getElementById("openChat");
+      const closeChatButton = document.getElementById("closeChat");
+      const chatBox = document.getElementById("chatSection");
+      const chatContent = document.getElementById("chatContent");
+
+      const fileInput = document.getElementById("fileInput");
+
+      openChatButton.addEventListener("click", () => {
+        chatBox.style.display = "block";
+        chatContent.innerHTML = `
+      <div class="message admin">Halo! Ada yang bisa saya bantu?</div>
+      <div class="message user">Tentu! Bagaimana cara memesan?</div>
+      <div class="message admin">Anda dapat melihat daftar produk kami di halaman toko.</div>
+    `;
+      });
+
+      closeChatButton.addEventListener("click", () => {
+        chatBox.style.display = "none";
+      });
+
+      const openChatButtonMobile = document.getElementById("openChatMobile");
+
+      openChatButtonMobile.addEventListener("click", () => {
+        chatBox.style.display = "block";
+        chatContent.innerHTML = `
+    <div class="message admin">Halo! Ada yang bisa saya bantu?</div>
+    <div class="message user">Tentu! Bagaimana cara memesan?</div>
+    <div class="message admin">Anda dapat melihat daftar produk kami di halaman toko.</div>
+  `;
+      });
+    </script>
+  </body>
+</html>
