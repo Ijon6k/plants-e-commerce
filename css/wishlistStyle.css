@@ -59,6 +59,11 @@ body {
   color: var(--text);
 }
 
+.star {
+  font-size: small;
+  color: #ebc23e;
+  text-shadow: var(--shadow);
+}
 .wishlist-container {
   padding: 10px;
 }
